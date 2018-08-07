@@ -1,0 +1,20 @@
+<scroll-view scroll-x>
+    <view class='news-tips'>
+      <view class="news-item" wx:for="{{newstip}}">
+        <view class= 'news-tip'>{{item.name}}</view>
+      </view>
+    </view>
+</scroll-view>
+
+<view class='hotnews-wrapper'>
+  <view class='hotnews-title'>title</view>
+  <view class='hotnews-list'>
+    <view class='hotnews-source'>source</view>
+    <view class='hotnews-time'>time</view>
+  </view>
+  <image class='hotnews-bg' src='http://img1.gtimg.com/news/pics/hv1/38/85/1076/69988613.jpg'></image>
+</view>
+
+<view class='news-list'>
+  <view></view>
+</view>
