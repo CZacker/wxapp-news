@@ -1,8 +1,10 @@
 .news-tips {
     display:flex;
     padding-top: 20rpx;
+    background-color: #F6F6F6;
+    padding-bottom: 20rpx;
 }
-.news-item {
+.news-listitem {
     display:flex;
     width: 115rpx;
     flex-shrink: 0;
@@ -16,7 +18,6 @@
 .hotnews-wrapper{
   position: relative;
   padding-top: 200rpx;
-  padding-bottom: 250rpx;
   color: rgba(255, 255, 255, 1)!important;
 }
 .hotnews-title{
@@ -24,7 +25,7 @@
   padding-top: 120rpx;
   font-size: 40rpx;
 }
-.hotnews-list{
+.hotnews-datalist{
   display: flex;
 }
 .hotnews-source{
@@ -45,4 +46,42 @@
   height: 400rpx;
   border-radius: 10rpx;
   z-index: -1;
+}
+.news-list{
+  display: flex;
+  position: relative;
+  padding-top: 70rpx; 
+}
+.news-item{
+  position: relative;
+  padding-left: 35rpx;
+  width: 425rpx;
+}
+
+.news-title{
+  position: relative;
+  font-size: 30rpx;
+  opacity: 0.80;
+  padding-left: 0rpx;
+  height: 140rpx;
+}
+.news-datalist{
+  display: flex;
+  position: relative;
+}
+.news-source{
+  font-size: 25rpx;
+  opacity: 0.80;
+}
+.news-date{
+  position: relative;
+  left: 20rpx;
+  font-size: 25rpx;
+  opacity: 0.80;
+}
+.news-img{
+  position: absolute;
+  left: 465rpx;
+  width: 250rpx;
+  height: 178rpx;
 }
