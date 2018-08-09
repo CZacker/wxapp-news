@@ -1,1 +1,47 @@
-/* pages/detail/detail.wxss */
+.detail-head{
+  padding-top: 35rpx;
+  padding-bottom: 50rpx;  
+}
+.detail-title{
+  padding-left: 35rpx;
+  font-size: 40rpx;
+  width: 700rpx;
+}
+.detail-datalist{
+  display: flex;
+  padding-top: 25rpx; 
+}
+.detail-source{
+  padding-left: 35rpx;
+  font-size: 30rpx;
+  opacity: 0.80;
+}
+.detail-time{
+  font-size: 30rpx;
+  opacity: 0.80;
+}
+.detail-readCount{
+  position: absolute;
+  right:  35rpx;
+  font-size: 30rpx;
+  opacity: 0.80;
+}
+.article-imgbox{
+  text-align: center;
+}
+.article-img{
+  width: 680rpx;
+  height: 453rpx;
+  margin: 35rpx auto;
+}
+.article-text{
+  margin: 35rpx 35rpx 35rpx 35rpx;
+
+}
+.bottom{
+  padding-top:30rpx;
+  padding-bottom: 30rpx;
+  font-size: 20rpx; 
+  text-align: center;
+  opacity: 0.65;
+}
