@@ -28,15 +28,17 @@
 }
 .article-imgbox{
   text-align: center;
+  padding-top: 35rpx;
+  padding-left: 35rpx;
 }
 .article-img{
   width: 680rpx;
-  height: 453rpx;
-  margin: 35rpx auto;
 }
 .article-text{
   margin: 35rpx 35rpx 35rpx 35rpx;
-
+  line-height: 60rpx;
+  font-size: 30rpx;
+  opacity: 0.85;
 }
 .bottom{
   padding-top:30rpx;

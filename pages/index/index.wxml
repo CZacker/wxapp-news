@@ -51,7 +51,7 @@
     </view>
 </view>
 
-<view class='hotnews-wrapper'>
+<view class='hotnews-wrapper' bindtap='navigateTodetail' id='{{hotnews.id}}'>
   <image class='hoticon' src='/images/hot.png'></image>
   <view class='hotnews-title'>{{hotnews.title}}</view>
   <view class='hotnews-datalist'>
@@ -61,7 +61,7 @@
   <image class='hotnews-bg' src='{{hotnews.firstImage}}'></image>
 </view>
 
-<view class='news-list' wx:for="{{newdata}}" wx:key="this" id='{{item.id}}'>
+<view class='news-list' wx:for="{{newdata}}" wx:key="this" id='{{item.id}}'  bindtap='navigateTodetail'>
     <view class='news-item'>
       <view class='news-title'>{{item.title}}</view>
       <view class='news-datalist'>

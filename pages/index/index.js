@@ -123,6 +123,10 @@ Page({
     })
   },
   onTapNavbar: function (e) {
+    this.setData({
+      hotnews: [],
+      newdata: []
+    })
     this.switchChannel(parseInt(e.currentTarget.id));
   },
   switchChannel: function (targetChannelIndex) {
@@ -153,7 +157,7 @@ Page({
         articleContent: this.data.navbarArray[index].text
       });
       this.getNews();
-    }, 1000);
+    }, 500);
   },
   onTouchstartArticles: function (e) {
     this.setData({
@@ -268,5 +272,11 @@ Page({
       navbarArray: navbarArray,
       scrollNavbarLeft: 0
     });
+  },
+  navigateTodetail(e){
+    wx.navigateTo({
+      url: '/pages/detail/detail?id=' + e.currentTarget.id,
+      success: function(res) {}
+    })
   }
 });
