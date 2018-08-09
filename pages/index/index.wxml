@@ -1,7 +1,7 @@
 <scroll-view scroll-x>
     <view class='news-tips'>
-      <view class="news-listitem" wx:for="{{newstip}}">
-        <view class= 'news-tip' wx:key='{{item.id}}'>{{item.name}}</view>
+      <view class="news-listitem" wx:for="{{newstip}}" id='{{item.id}}'>
+        <view class= 'news-tip' >{{item.name}}</view>
         <view class='choosed-tip'></view>
       </view>
     </view>
@@ -9,7 +9,6 @@
 
 <view class='hotnews-wrapper'>
   <image class='hoticon' src='/image/hot.png'></image>
-
   <view class='hotnews-title'>{{hotnews.title}}</view>
   <view class='hotnews-datalist'>
     <view class='hotnews-source'>{{hotnews.source}}</view>
@@ -18,7 +17,7 @@
   <image class='hotnews-bg' src='{{hotnews.firstImage}}'></image>
 </view>
 
-<view class='news-list' wx:for="{{newdata}}">
+<view class='news-list' wx:for="{{newdata}}" id="{{item.id}}">
     <view class='news-item'>
       <view class='news-title'>{{item.title}}</view>
       <view class='news-datalist'>
