@@ -156,7 +156,7 @@ Page({
     this.setData({
       loadingModalHide: false,
       articleContent: '',
-      // hotnews: { firstImage:'/images/index/noimage.png'},
+      hotnews: { firstImage:'/images/index/noimage.png'},
     });
     setTimeout(() => {
       this.setData({
