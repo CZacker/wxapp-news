@@ -29,7 +29,7 @@
 .article-imgbox{
   text-align: center;
   padding-top: 35rpx;
-  padding-left: 35rpx;
+  
 }
 .article-img{
   width: 680rpx;
