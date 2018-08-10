@@ -5,7 +5,8 @@ Page({
    */
   data: {
     id:'',
-    detaildata: {}
+    detaildata: {},
+    loadingModalHide: false
   },
 
   /**
@@ -13,14 +14,11 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      id: options.id
+      id: options.id,
+      loadingModalHide: false
     })
-    this.getArticle()
-  },
-  onPullDownRefresh(){
-    this.getArticle(()=>{
-      wx.stopPullDownRefresh()
-    })
+    setTimeout(()=>{
+    this.getArticle();},500)
   },
   getArticle(options,callback){
     wx.request({
@@ -33,14 +31,15 @@ Page({
         this.setArticle(result)
       },
       complete: () => {
-        callback && callback()
+        callback && callback() //加入回调函数
       }
     })
   },
   setArticle(result){
     console.log(result)
-    result.date = result.date.split('T')[0]
+    result.date = result.date.split('T')[0]//切割时间
     this.setData({
+      loadingModalHide: true,
       detaildata: result
     })
   }

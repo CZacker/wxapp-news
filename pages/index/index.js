@@ -10,7 +10,7 @@ Page({
       'yl',  
       'js', 
       'ty',
-      'other'],
+      'other'],//bar分栏请求数组
     currenttype:'gn',
     hotnews: [],
     newdata: [],
@@ -44,7 +44,7 @@ Page({
       id:'other'
     }
     ],
-    navbarShowIndexArray: Array.from(Array(7).keys()),
+    navbarShowIndexArray: Array.from(Array(7).keys()),//一次性显示7个栏目bar
     navbarHideIndexArray: [],
     windowWidth: 375,
     scrollNavbarLeft: 0,
@@ -138,7 +138,7 @@ Page({
   },
   switchChannel: function (targetChannelIndex) {
     this.getArticles(targetChannelIndex);
-
+//获取文章
     let navbarArray = this.data.navbarArray;
     navbarArray.forEach((item, index, array) => {
       item.type = '';
@@ -156,7 +156,7 @@ Page({
     this.setData({
       loadingModalHide: false,
       articleContent: '',
-      hotnews: { firstImage:'/images/index/noimage.png'},
+      hotnews: { firstImage:'/images/index/noimage.png'},//预览图即noimage.png
     });
     setTimeout(() => {
       this.setData({
@@ -165,7 +165,7 @@ Page({
         articleContent: this.data.navbarArray[index].text
       });
       this.getNews();
-    }, 500);
+    }, 500);//请求时间
   },
   onTouchstartArticles: function (e) {
     this.setData({

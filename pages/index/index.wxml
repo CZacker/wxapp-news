@@ -6,6 +6,7 @@
         <view class="navbar-item visibility-hidden">
             <view class="navbar-item-wrap">没有了</view>
         </view>
+    <!-- ‘没有了’指明到底部了 -->
     </scroll-view>
     <view class="navbar-arrow-down" catchtap="showChannelSettingModal">
         <view class="navbar-arrow-down-wrap">
@@ -55,7 +56,7 @@
   <image class='hoticon' src='/images/hot.png'></image>
   <view class='hotnews-title'>{{hotnews.title}}</view>
   <view class='hotnews-datalist'>
-    <view class='hotnews-source'>{{hotnews.source}}</view>
+    <view class='hotnews-source'>{{hotnews.source?hotnews.source+'\t.':'未知来源\t.'}}</view>
     <view class='hotnews-time'>{{hotnews.date}}</view>
   </view>
   <image class='hotnews-bg' src='{{hotnews.firstImage}}'></image>
@@ -65,7 +66,7 @@
     <view class='news-item'>
       <view class='news-title'>{{item.title}}</view>
       <view class='news-datalist'>
-        <view class='news-source'>{{item.source?item.source+'\t.':''}}</view>
+        <view class='news-source'>{{item.source?item.source+'\t.':'未知来源\t.'}}</view>
         <!-- 对空值作者做处理 -->
         <view class='news-date'>{{item.date}}</view>
       </view>

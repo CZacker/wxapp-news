@@ -40,10 +40,34 @@
   font-size: 30rpx;
   opacity: 0.85;
 }
+.strong{
+  font-weight: bold;
+}
 .bottom{
   padding-top:30rpx;
   padding-bottom: 30rpx;
   font-size: 20rpx; 
   text-align: center;
   opacity: 0.65;
+}
+.loading-modal {
+    display: flex;
+
+    position: fixed;
+    z-index: 10;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+
+    align-items: center;
+    justify-content: center;
+}
+.loading-text-wrap {
+    padding-bottom: 200rpx;
+}
+.loading-text {
+    font-size: 50px;
+    color: #cfcfcf;
 }

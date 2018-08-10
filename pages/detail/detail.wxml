@@ -1,17 +1,20 @@
 <!--pages/detail/detail.wxml-->
-<view class='detail-head'>
+<view class='detail-head' hidden='{{!loadingModalHide}}'>
 <view class='detail-title'>{{detaildata.title}}</view>
 <view class='detail-datalist'>
-  <view class='detail-source'>{{detaildata.source?detaildata.source+'\t.':''}}</view>
+  <view class='detail-source'>{{detaildata.source?detaildata.source+'\t.':'未知来源\t.'}}</view>
   <view class='detail-time'>{{detaildata.date}}</view>
   <view class='detail-readCount'>阅读：{{detaildata.readCount}}</view>
 </view>
 </view>
-<view>
   <view wx:for='{{detaildata.content}}' wx:key="unique">
     <view wx:if="{{item.type === 'image'}}" class='article-imgbox'><image src='{{item.src}}' class='article-img'></image></view>
     <view wx:elif="{{item.type === 'p'}}" class='article-text'>{{item.text}}</view>
-  </view>
-</view>
-
+    <view wx:elif="{{item.type === 'strong'}}" class='article-text strong'>{{item.text}}</view>
+    </view>
+    <view class="loading-modal" hidden="{{ loadingModalHide }}">
+        <view class="loading-text-wrap">
+            <text class="loading-text">T<text style='color:#d81e06'>NEWS</text></text>
+        </view>
+    </view>
 <view class='bottom'>COPYRIGHT TNEWS</view>
