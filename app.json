@@ -8,7 +8,6 @@
     "backgroundTextStyle": "#F6F6F6",
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "TNEWS",
-    "navigationBarTextStyle": "black",
-    "enablePullDownRefresh": true
+    "navigationBarTextStyle": "black"
   }
 }

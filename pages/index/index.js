@@ -1,10 +1,16 @@
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    newstip: ['gn', 'gj' ,'cj' , 'yl',  'js' , 'ty','other'],
+    newstip: [
+      'gn',
+      'gj',
+      'cj', 
+      'yl',  
+      'js', 
+      'ty',
+      'other'],
     currenttype:'gn',
     hotnews: [],
     newdata: [],
@@ -52,7 +58,7 @@ Page({
     channelSettingModalHide: true,
     articlesHide: false,
     articleContent: '',
-    loadingModalHide: false,
+    loadingModalHide: false, //loading page
     temporaryArray: Array.from(new Array(9), (val, index) => index + 1)
   },
 
@@ -105,6 +111,7 @@ Page({
       },
       success: res => {
         let result = res.data.result
+        console.log(result)
         this.setNews(result)
       },
       complete: () => {
@@ -113,8 +120,8 @@ Page({
     })
   },
   setNews(result) {
-    console.log(result)
-    result.map( u => { u.date = u.date.split('T')[0] })
+    // console.log(result)
+    result.map(u => { u.date = u.date.split('T')[0]; u.image = u.image !== '' ? u.image :'/images/index/noimage.png' })  //截取年月日，查找有无无图文章，有则替换数据为noimage.png
     let hotnewdata = result[0];
     let newsdata = result.shift();
     this.setData({
@@ -148,7 +155,8 @@ Page({
   getArticles: function (index) {
     this.setData({
       loadingModalHide: false,
-      articleContent: ''
+      articleContent: '',
+      // hotnews: { firstImage:'/images/index/noimage.png'},
     });
     setTimeout(() => {
       this.setData({
